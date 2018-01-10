@@ -1,0 +1,428 @@
+2017-11-06 00:28:57,151 INFO  shellcli.py:283 - main - Shell CLI Begin
+2017-11-06 00:28:57,152 DEBUG shellcli.py:318 - main - {'files': None, 'ugi': 'asrd.cp.big.data.services.team@autodesk.com,default_group', 'retry': '0', 'encoded_cloud_hadoop_props': None, 'parameters': None, 'query_file': None, 'qid': '106179819', 'sid': '0', 'name': 'adp-workflow-mpa-experiment-usage-derived-db_daily_20171102', 'cluster_config_id': None, 'cloud_name': None, 'cmdid': '4152359', 'cluster_id': '38035', 'pool': None, 'hadoop_configuration': None, 'archives': None, 'inline': 'ZXhwb3J0IFNQQVJLX0hPTUU9L3Vzci9saWIvc3Bhcms7L3Vzci9saWIvcXVi\nb2xlL3BhY2thZ2VzL3NwYXJrL3NwYXJrL2Jpbi9zcGFyay1zdWJtaXQgLS1j\nb25mIHNwYXJrLnF1Ym9sZS5xdWVyeWhpc3QuZmlsZXByZWZpeD1zMzovL2Nv\nbS5hdXRvZGVzay5lZGwucHJkL2FwcHMvcXVib2xlL2FjY291bnRfaWQvNDMy\nMi90bXAvMjAxNy0xMS0wNi80MzIyLzEwNjE3OTgxOSAtLWRyaXZlci1tZW1v\ncnkgMThHIC0tbnVtLWV4ZWN1dG9ycyA0IC0tZXhlY3V0b3ItY29yZXMgMiAt\nLWV4ZWN1dG9yLW1lbW9yeSAyMkcgLS1jbGFzcyBjb20uYXV0b2Rlc2suYWRw\nLnV0aWxzLnNxbC5TcWxSdW5uZXIgczM6Ly9jb20uYXV0b2Rlc2suZWRsLnBy\nZC9hcHBzL3F1Ym9sZS9saWIvYWRwLXNjYWxhLXV0aWxzLTAuMC4yLVNOQVBT\nSE9ULmphciAtLXNxbC1maWxlLWxvY2F0aW9uIGhkZnM6Ly8xMC40Ny42LjE4\nMDo4MDIwL3VzZXIvb3pkL2FkcC13b3JrZmxvdy1tcGFfN2E1ODdjODVhNi9h\nZHAtd29ya2Zsb3ctbXBhLWV4cGVyaW1lbnQtdXNhZ2UtZGVyaXZlZC1kYi9z\ncmMvaGl2ZS9tcGFfZXhwZXJpbWVudF90b3RhbF91c2VyX3Nlc3Npb25fd2Vl\na2x5LnNxbCAtLXF1ZXJ5LXBhcmFtcyAiIiJXSz0yMDE3MTAyOSxXS19FTkRf\nREFURT0yMDE3MTEwNCxEQVRBQkFTRT11c2FnZSxEQVRBQkFTRV9ERVJJVkVE\nPXVzYWdlX2Rlcml2ZWQsREFUQUJBU0VfTEVHQUNZX0JEUD1sZWdhY3lfYmRw\nLERUPTIwMTcxMTAyIiIi\n', 'cloud_prefix': None, 'encoded_cluster_config': None, 'script_location': None, 'job_level_overrides': 'yarn.app.mapreduce.am.command-opts=-Xmx18432m,yarn.app.mapreduce.am.resource.mb=20275'}
+No config file specified - defaulting to hustler/configs/config.default for config file
+2017-11-06 00:29:00,452 >>> Cluster id '38035', account id '4322' marked UP in DB. Trying to latch ...
+2017-11-06 00:29:00,870 >>> Resource manager on master ec2-54-219-168-80.us-west-1.compute.amazonaws.com for cluster qbol_acc4322_cl38035 is accessible.
+2017-11-06 00:29:00,937 DEBUG cmd_utils.py:101 - start_cluster_and_get_details - Master IP address is: ec2-54-219-168-80.us-west-1.compute.amazonaws.com
+2017-11-06 00:29:01,762 DEBUG cmd_utils.py:600 - _update_master_info - Adding master node information to the database for command id: 4152359
+2017-11-06 00:29:01,783 DEBUG cmd_utils.py:605 - _update_master_info - Command id: 4152359, master set to: ec2-54-219-168-80.us-west-1.compute.amazonaws.com
+2017-11-06 00:29:02,067 INFO  shellcli.py:475 - getHadoopShellLauncherCommand - ['/usr/lib/hadoop2/bin/hadoop', 'jar', '/usr/lib/hadoop2/share/hadoop/quboleshellexecutor/qubole-shell-executor.jar', 'com.qubole.shell.executor.ShellLauncher', u'-Dmaster.hostname=ec2-54-219-168-80.us-west-1.compute.amazonaws.com', '-Dhadoop.job.ugi=asrd.cp.big.data.services.team', '-Dmapred.job.name=adp-workflow-mpa-experiment-usage-derived-db_daily_20171102-ShellCommand', '-Dqubole.command.id=106179819', '-Dqubole.command.type=parent']
+2017-11-06 00:29:02,099 INFO  shellcli.py:360 - main - ['/usr/lib/hadoop2/bin/hadoop' , 'jar' , '/usr/lib/hadoop2/share/hadoop/quboleshellexecutor/qubole-shell-executor.jar' , 'com.qubole.shell.executor.ShellLauncher' , u'-Dmaster.hostname=ec2-54-219-168-80.us-west-1.compute.amazonaws.com' , '-Dhadoop.job.ugi=asrd.cp.big.data.services.team' , '-Dmapred.job.name=adp-workflow-mpa-experiment-usage-derived-db_daily_20171102-ShellCommand' , '-Dqubole.command.id=106179819' , '-Dqubole.command.type=parent' , '-Dfs.s3.awsSecretAccessKey=xxXXXXxx' , '-Dfs.s3n.awsAccessKeyId=xxXXXXxx' , '-Dfs.s3n.awsSecretAccessKey=xxXXXXxx' , '-Dfs.s3.awsAccessKeyId=xxXXXXxx' , '-Dhadoop.socks.server=10.171.122.249:22269' , '-Dhadoop.rpc.socket.factory.class.default=org.apache.hadoop.net.SocksSocketFactory' , '-Dhadoop.publish-metrics-to-mojave=true' , '-Dyarn.scheduler.fair.preemption=true' , '-Dtez.am.java.opts=-Xmx3763m' , '-Dyarn.scheduler.minimum-allocation-vcores=1' , '-Dtez.runtime.io.sort.mb=1024' , '-Dyarn.scheduler.minimum-allocation-mb=1024' , '-Dyarn.app.mapreduce.am.resource.mb=20275' , '-Dmapreduce.map.java.opts=-Xmx3763m' , '-Dyarn.scheduler.maximum-allocation-mb=56448' , '-Dmapred.hustler.rebalancing.enabled=true' , '-Dadp.INSTALL_HVAC_CX_ORACLE=true' , '-Ddfs.namenode.http-bind-host=0.0.0.0' , '-Dyarn.resourcemanager.aggressive.log.aggregation.enabled=true' , '-Dqubole.aws.use.v4.signature=true' , '-Dmapreduce.reduce.java.opts=-Xmx3763m' , '-Dfs.s3a.acl.default=bucket-owner-full-control' , '-Dadp.CLUSTER=prd' , '-Ddfs.datanode.max.transfer.threads=12288' , '-Dyarn.resourcemanager.app.timeout.minutes=11520' , '-Ddfs.namenode.https-bind-host=0.0.0.0' , '-Dyarn.app.mapreduce.am.env=LD_LIBRARY_PATH=/usr/lib/hadoop2/lib/native:/instantclient_12_2' , '-Dmapreduce.task.timeout=900000' , '-Dmapreduce.map.memory.mb=4704' , '-Dqubole.command.id=106179819' , '-Dyarn.resourcemanager.am.max-attempts=1' , '-Dmapreduce.reduce.memory.mb=4704' , '-Dyarn.scheduler.maximum-allocation-vcores=16' , '-Dyarn.scheduler.fair.continuous-scheduling-enabled=true' , '-Dmapreduce.reduce.cpu.vcores=1' , '-Dmapreduce.map.cpu.vcores=1' , '-Ddfs.namenode.rpc-bind-host=0.0.0.0' , '-Dyarn.app.mapreduce.am.command-opts=-Xmx18432m' , '-Dyarn.resourcemanager.bind-host=0.0.0.0' , '-Dyarn.app.mapreduce.am.resource.cpu-vcores=1' , '-Dmapreduce.task.io.sort.mb=1024' , '-Ddfs.datanode.max.xcievers=12288' , '-Dtez.am.resource.memory.mb=4704' , '-Dmapreduce.job.ubertask.enable=true' , '-Dmapreduce.map.memory.mb=512' , '-Dmapreduce.map.cpu.vcores=1' , 'ZXhwb3J0IFNQQVJLX0hPTUU9L3Vzci9saWIvc3Bhcms7L3Vzci9saWIvcXVi\nb2xlL3BhY2thZ2VzL3NwYXJrL3NwYXJrL2Jpbi9zcGFyay1zdWJtaXQgLS1j\nb25mIHNwYXJrLnF1Ym9sZS5xdWVyeWhpc3QuZmlsZXByZWZpeD1zMzovL2Nv\nbS5hdXRvZGVzay5lZGwucHJkL2FwcHMvcXVib2xlL2FjY291bnRfaWQvNDMy\nMi90bXAvMjAxNy0xMS0wNi80MzIyLzEwNjE3OTgxOSAtLWRyaXZlci1tZW1v\ncnkgMThHIC0tbnVtLWV4ZWN1dG9ycyA0IC0tZXhlY3V0b3ItY29yZXMgMiAt\nLWV4ZWN1dG9yLW1lbW9yeSAyMkcgLS1jbGFzcyBjb20uYXV0b2Rlc2suYWRw\nLnV0aWxzLnNxbC5TcWxSdW5uZXIgczM6Ly9jb20uYXV0b2Rlc2suZWRsLnBy\nZC9hcHBzL3F1Ym9sZS9saWIvYWRwLXNjYWxhLXV0aWxzLTAuMC4yLVNOQVBT\nSE9ULmphciAtLXNxbC1maWxlLWxvY2F0aW9uIGhkZnM6Ly8xMC40Ny42LjE4\nMDo4MDIwL3VzZXIvb3pkL2FkcC13b3JrZmxvdy1tcGFfN2E1ODdjODVhNi9h\nZHAtd29ya2Zsb3ctbXBhLWV4cGVyaW1lbnQtdXNhZ2UtZGVyaXZlZC1kYi9z\ncmMvaGl2ZS9tcGFfZXhwZXJpbWVudF90b3RhbF91c2VyX3Nlc3Npb25fd2Vl\na2x5LnNxbCAtLXF1ZXJ5LXBhcmFtcyAiIiJXSz0yMDE3MTAyOSxXS19FTkRf\nREFURT0yMDE3MTEwNCxEQVRBQkFTRT11c2FnZSxEQVRBQkFTRV9ERVJJVkVE\nPXVzYWdlX2Rlcml2ZWQsREFUQUJBU0VfTEVHQUNZX0JEUD1sZWdhY3lfYmRw\nLERUPTIwMTcxMTAyIiIi\n' , '-Cmapreduce.task.timeout=OTAwMDAw\n' , '-Cadp.INSTALL_HVAC_CX_ORACLE=dHJ1ZQ==\n' , '-Cdfs.namenode.http-bind-host=MC4wLjAuMA==\n' , '-Cfs.s3n.awsSecretAccessKey=xxXXXXxx' , '-Cfs.s3.awsAccessKeyId=xxXXXXxx' , '-Cyarn.scheduler.fair.preemption=dHJ1ZQ==\n' , '-Cyarn.resourcemanager.aggressive.log.aggregation.enabled=dHJ1ZQ==\n' , '-Cyarn.resourcemanager.bind-host=MC4wLjAuMA==\n' , '-Cfs.s3.awsSecretAccessKey=xxXXXXxx' , '-Cadp.CLUSTER=cHJk\n' , '-Cfs.s3n.awsAccessKeyId=xxXXXXxx' , '-Cyarn.resourcemanager.app.timeout.minutes=MTE1MjA=\n' , '-Cfs.s3a.acl.default=YnVja2V0LW93bmVyLWZ1bGwtY29udHJvbA==\n' , '-Cdfs.namenode.rpc-bind-host=MC4wLjAuMA==\n' , '-Cyarn.app.mapreduce.am.env=TERfTElCUkFSWV9QQVRIPS91c3IvbGliL2hhZG9vcDIvbGliL25hdGl2ZTovaW5zdGFudGNsaWVu\ndF8xMl8y\n' , '-Cdfs.namenode.https-bind-host=MC4wLjAuMA==\n' , '-Cqubole.command.id=MTA2MTc5ODE5\n' , '-Cqubole.command.type=Y2hpbGQ=\n'] 
+Qubole > log4j:WARN No such property [rollingPolicy] in org.apache.log4j.RollingFileAppender.
+Qubole > Shell Launcher Begin...
+Qubole > Tracking URL:  <a href='https://api.qubole.com/cluster-proxy?encodedUrl=http%3A%2F%2Fec2-54-219-168-80.us-west-1.compute.amazonaws.com%3A8088%2Fproxy%2Fapplication_1506405635520_117429%2F&amp;clusterInst=639584' target='_blank'> Application UI </a> 
+2017-11-06 00:29:20,448 INFO  shellcli.py:188 - run - Application results url: http://ip-10-47-7-113.us-west-1.compute.internal:8042/ws/v1/node/containerlogs/container_1506405635520_117429_01_000001/stdout
+2017-11-06 00:29:20,448 INFO  shellcli.py:189 - run - Application logs url: http://ip-10-47-7-113.us-west-1.compute.internal:8042/ws/v1/node/containerlogs/container_1506405635520_117429_01_000001/stderr
+App > 17/11/06 00:29:20 main INFO SparkSubmitArguments: downloadPrimarySource: initial primary source, master is: s3://com.autodesk.edl.prd/apps/qubole/lib/adp-scala-utils-0.0.2-SNAPSHOT.jar yarn-client
+App > 17/11/06 00:29:20 redirect stderr for command /usr/lib/hadoop2/bin/hdfs INFO Utils: log4j:WARN No such property [rollingPolicy] in org.apache.log4j.RollingFileAppender.
+App > 17/11/06 00:29:21 redirect stderr for command /usr/lib/hadoop2/bin/hdfs INFO Utils: 17/11/06 00:29:21 INFO Configuration.deprecation: fs.default.name is deprecated. Instead, use fs.defaultFS
+App > 17/11/06 00:29:22 redirect stderr for command /usr/lib/hadoop2/bin/hdfs INFO Utils: 17/11/06 00:29:22 INFO s3OperationsLog: Method=HEAD ResponseCode=200 URI=http://com.autodesk.edl.prd.s3.amazonaws.com/apps%2Fqubole%2Flib%2Fadp-scala-utils-0.0.2-SNAPSHOT.jar
+App > 17/11/06 00:29:22 redirect stderr for command /usr/lib/hadoop2/bin/hdfs INFO Utils: 17/11/06 00:29:22 INFO s3OperationsLog: Method=HEAD ResponseCode=200 URI=http://com.autodesk.edl.prd.s3.amazonaws.com/apps%2Fqubole%2Flib%2Fadp-scala-utils-0.0.2-SNAPSHOT.jar
+App > 17/11/06 00:29:22 redirect stderr for command /usr/lib/hadoop2/bin/hdfs INFO Utils: 17/11/06 00:29:22 INFO s3OperationsLog: Method=GET ResponseCode=200 URI=http://com.autodesk.edl.prd.s3.amazonaws.com/apps%2Fqubole%2Flib%2Fadp-scala-utils-0.0.2-SNAPSHOT.jar
+App > 17/11/06 00:29:22 redirect stderr for command /usr/lib/hadoop2/bin/hdfs INFO Utils: 17/11/06 00:29:22 INFO s3OperationsLog: Method=HEAD ResponseCode=200 URI=http://com.autodesk.edl.prd.s3.amazonaws.com/apps%2Fqubole%2Flib%2Fadp-scala-utils-0.0.2-SNAPSHOT.jar
+App > 17/11/06 00:29:22 redirect stderr for command /usr/lib/hadoop2/bin/hdfs INFO Utils: 17/11/06 00:29:22 INFO s3native.NativeS3FileSystem: file size of apps/qubole/lib/adp-scala-utils-0.0.2-SNAPSHOT.jar is 84030
+App > 17/11/06 00:29:22 main INFO SparkSubmitArguments: downloadPrimarySource: final primary source, master is: /tmp/spark-aa755510-3beb-461c-8a6f-9e69e3cb9775/adp-scala-utils-0.0.2-SNAPSHOT.jar yarn-client
+App > Default value for autoscalingv2 : false
+App > maxExecutors have been set to default : 2
+App > Warning: Setting maxExecutors to numExecutors as maxExecutors 4 is less numExecutors 4
+App > 17/11/06 00:29:22 main INFO Utils: Registered signal handlers for exception exit hook [TERM, HUP, INT]
+App > 17/11/06 00:29:24 main INFO deprecation: fs.default.name is deprecated. Instead, use fs.defaultFS
+App > 17/11/06 00:29:24 main INFO SparkContext: Running Spark version 1.5.1
+App > 17/11/06 00:29:24 main INFO SparkContext: Spark configuration:
+App > spark.app.name=SQL Runner. Query_file: hdfs://10.47.6.180:8020/user/ozd/adp-workflow-mpa_7a587c85a6/adp-workflow-mpa-experiment-usage-derived-db/src/hive/mpa_experiment_total_user_session_weekly.sql
+App > spark.authenticate=false
+App > spark.authenticate.enableSaslEncryption=false
+App > spark.driver.cores=2
+App > spark.driver.extraClassPath=/usr/lib/spark/conf
+App > spark.driver.extraJavaOptions=-Djava.net.preferIPv4Stack=true
+App > spark.driver.extraLibraryPath=/usr/lib/hadoop2/lib/native
+App > spark.driver.memory=18G
+App > spark.dynamicAllocation.enabled=true
+App > spark.eventLog.compress=true
+App > spark.eventLog.dir=hdfs://ec2-54-219-168-80.us-west-1.compute.amazonaws.com:9000/spark-history
+App > spark.eventLog.enabled=true
+App > spark.executor.cores=2
+App > spark.executor.extraJavaOptions=-Djava.net.preferIPv4Stack=true
+App > spark.executor.instances=4
+App > spark.executor.memory=22G
+App > spark.hadoop.mapred.output.committer.class=org.apache.hadoop.mapred.DirectFileOutputCommitter
+App > spark.hadoop.mapreduce.use.directfileoutputcommitter=true
+App > spark.hadoop.spark.sql.parquet.output.committer.class=org.apache.spark.sql.parquet.DirectParquetOutputCommitter
+App > spark.history.fs.update.interval=10
+App > spark.history.retainedApplications=5
+App > spark.jars=file:/tmp/spark-aa755510-3beb-461c-8a6f-9e69e3cb9775/adp-scala-utils-0.0.2-SNAPSHOT.jar
+App > spark.logConf=true
+App > spark.master=yarn-client
+App > spark.network.sasl.serverAlwaysEncrypt=false
+App > spark.qubole.queryhist.fileprefix=s3://com.autodesk.edl.prd/apps/qubole/account_id/4322/tmp/2017-11-06/4322/106179819
+App > spark.scheduler.listenerbus.eventqueue.size=20000
+App > spark.shuffle.service.enabled=true
+App > spark.speculation=false
+App > spark.sql.hive.metastore.jars=builtin
+App > spark.sql.hive.metastore.version=1.2.1
+App > spark.sql.qubole.recover.partitions=false
+App > spark.sql.qubole.split.computation=true
+App > spark.submit.deployMode=client
+App > spark.ui.retainedJobs=33
+App > spark.ui.retainedStages=100
+App > spark.yarn.dist.archives=file:/usr/lib/qubole/packages/spark/spark/R/lib/sparkr.zip#sparkr
+App > spark.yarn.executor.memoryOverhead=2389
+App > spark.yarn.historyServer.address=ec2-54-219-168-80.us-west-1.compute.amazonaws.com:18080
+App > spark.yarn.maxAppAttempts=1
+App > 17/11/06 00:29:24 main INFO SecurityManager: Changing view acls to: yarn,asrd.cp.big.data.services.team
+App > 17/11/06 00:29:24 main INFO SecurityManager: Changing modify acls to: yarn,asrd.cp.big.data.services.team
+App > 17/11/06 00:29:24 main INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(yarn, asrd.cp.big.data.services.team); users with modify permissions: Set(yarn, asrd.cp.big.data.services.team)
+App > 17/11/06 00:29:25 sparkDriver-akka.actor.default-dispatcher-2 INFO Slf4jLogger: Slf4jLogger started
+App > 17/11/06 00:29:25 sparkDriver-akka.actor.default-dispatcher-2 INFO Remoting: Starting remoting
+App > 17/11/06 00:29:25 sparkDriver-akka.actor.default-dispatcher-2 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@10.47.7.113:33315]
+App > 17/11/06 00:29:25 main INFO Utils: Successfully started service 'sparkDriver' on port 33315.
+App > 17/11/06 00:29:25 main INFO SparkEnv: Registering MapOutputTracker
+App > 17/11/06 00:29:25 main INFO SparkEnv: Registering BlockManagerMaster
+App > 17/11/06 00:29:25 main INFO DiskBlockManager: Created local directory at /media/ephemeral0/yarn/local/usercache/asrd.cp.big.data.services.team/appcache/application_1506405635520_117429/blockmgr-3e677413-74e7-45e3-8146-ce97606d2989
+App > 17/11/06 00:29:25 main INFO MemoryStore: MemoryStore started with capacity 9.3 GB
+App > 17/11/06 00:29:25 main INFO HttpFileServer: HTTP File server directory is /media/ephemeral0/yarn/local/usercache/asrd.cp.big.data.services.team/appcache/application_1506405635520_117429/spark-a30da80c-b00c-4b2d-a4a2-73405fee62e9/httpd-e72e8239-5e31-4a0e-be1f-c141e2c1d5b1
+App > 17/11/06 00:29:25 main INFO HttpServer: Starting HTTP Server
+App > 17/11/06 00:29:25 main INFO Server: jetty-8.y.z-SNAPSHOT
+App > 17/11/06 00:29:25 main INFO AbstractConnector: Started SocketConnector@0.0.0.0:34537
+App > 17/11/06 00:29:25 main INFO Utils: Successfully started service 'HTTP file server' on port 34537.
+App > 17/11/06 00:29:25 main INFO SparkEnv: Registering OutputCommitCoordinator
+App > 17/11/06 00:29:25 main INFO Server: jetty-8.y.z-SNAPSHOT
+App > 17/11/06 00:29:25 main INFO AbstractConnector: Started SelectChannelConnector@0.0.0.0:4040
+App > 17/11/06 00:29:25 main INFO Utils: Successfully started service 'SparkUI' on port 4040.
+App > 17/11/06 00:29:25 main INFO SparkUI: Started SparkUI at http://10.47.7.113:4040
+Qubole > Shell command started on mapper
+App > 17/11/06 00:29:25 main INFO SparkContext: Added JAR file:/tmp/spark-aa755510-3beb-461c-8a6f-9e69e3cb9775/adp-scala-utils-0.0.2-SNAPSHOT.jar at http://10.47.7.113:34537/jars/adp-scala-utils-0.0.2-SNAPSHOT.jar with timestamp 1509928165914
+App > 17/11/06 00:29:25 main WARN MetricsSystem: Using default name DAGScheduler for source because spark.app.id is not set.
+App > 17/11/06 00:29:26 main INFO deprecation: fs.default.name is deprecated. Instead, use fs.defaultFS
+App > 17/11/06 00:29:26 main INFO deprecation: fs.default.name is deprecated. Instead, use fs.defaultFS
+App > 17/11/06 00:29:26 main INFO TimelineClientImpl: Timeline service address: http://ec2-54-219-168-80.us-west-1.compute.amazonaws.com:8188/ws/v1/timeline/
+App > 17/11/06 00:29:26 main INFO RMProxy: Connecting to ResourceManager at ec2-54-219-168-80.us-west-1.compute.amazonaws.com/10.47.7.86:8032
+App > 17/11/06 00:29:26 main INFO Client: Requesting a new application from cluster with 34 NodeManagers
+App > 17/11/06 00:29:26 main INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (56448 MB per container)
+App > 17/11/06 00:29:26 main INFO Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+App > 17/11/06 00:29:26 main INFO Client: Setting up container launch context for our AM
+App > 17/11/06 00:29:27 main INFO Client: Setting up the launch environment for our AM container
+App > 17/11/06 00:29:27 main INFO Client: Preparing resources for our AM container
+App > 17/11/06 00:29:27 main INFO deprecation: fs.default.name is deprecated. Instead, use fs.defaultFS
+App > 17/11/06 00:29:27 main INFO deprecation: fs.default.name is deprecated. Instead, use fs.defaultFS
+App > 17/11/06 00:29:27 main INFO Client: Uploading resource file:/usr/lib/qubole/packages/spark/spark/spark-assembly-1.5.1-hadoop2.6.0-qds-0.4.13.jar -> hdfs://ec2-54-219-168-80.us-west-1.compute.amazonaws.com:9000/user/asrd.cp.big.data.services.team/.sparkStaging/application_1506405635520_117433/spark-assembly-1.5.1-hadoop2.6.0-qds-0.4.13.jar
+App > 17/11/06 00:29:27 main INFO deprecation: fs.default.name is deprecated. Instead, use fs.defaultFS
+App > 17/11/06 00:29:27 main INFO Client: Uploading resource file:/usr/lib/qubole/packages/spark/spark/R/lib/sparkr.zip#sparkr -> hdfs://ec2-54-219-168-80.us-west-1.compute.amazonaws.com:9000/user/asrd.cp.big.data.services.team/.sparkStaging/application_1506405635520_117433/sparkr.zip
+App > 17/11/06 00:29:27 main INFO Client: Uploading resource file:/usr/lib/qubole/packages/spark/spark/python/lib/pyspark.zip -> hdfs://ec2-54-219-168-80.us-west-1.compute.amazonaws.com:9000/user/asrd.cp.big.data.services.team/.sparkStaging/application_1506405635520_117433/pyspark.zip
+App > 17/11/06 00:29:27 main INFO Client: Uploading resource file:/usr/lib/qubole/packages/spark/spark/python/lib/py4j-0.8.2.1-src.zip -> hdfs://ec2-54-219-168-80.us-west-1.compute.amazonaws.com:9000/user/asrd.cp.big.data.services.team/.sparkStaging/application_1506405635520_117433/py4j-0.8.2.1-src.zip
+App > 17/11/06 00:29:27 main INFO Client: Uploading resource file:/media/ephemeral0/yarn/local/usercache/asrd.cp.big.data.services.team/appcache/application_1506405635520_117429/spark-a30da80c-b00c-4b2d-a4a2-73405fee62e9/__spark_conf__6741571705167060296.zip -> hdfs://ec2-54-219-168-80.us-west-1.compute.amazonaws.com:9000/user/asrd.cp.big.data.services.team/.sparkStaging/application_1506405635520_117433/__spark_conf__6741571705167060296.zip
+App > 17/11/06 00:29:27 main INFO SecurityManager: Changing view acls to: yarn,asrd.cp.big.data.services.team
+App > 17/11/06 00:29:27 main INFO SecurityManager: Changing modify acls to: yarn,asrd.cp.big.data.services.team
+App > 17/11/06 00:29:27 main INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(yarn, asrd.cp.big.data.services.team); users with modify permissions: Set(yarn, asrd.cp.big.data.services.team)
+App > 17/11/06 00:29:27 main INFO Client: Submitting application 117433 to ResourceManager
+2017-11-06 00:29:31,272 DEBUG cmd_utils.py:573 - _update_job_info - Current Hadoop job list: None
+2017-11-06 00:29:31,273 DEBUG cmd_utils.py:580 - _update_job_info - Updated Hadoop job list: ["application_1506405635520_117433"]
+App > 17/11/06 00:29:27 main INFO YarnClientImpl: Submitted application application_1506405635520_117433
+App > 17/11/06 00:29:28 main INFO Client: Application report for application_1506405635520_117433 (state: ACCEPTED)
+App > 17/11/06 00:29:28 main INFO Client: 
+App > 	 client token: N/A
+App > 	 diagnostics: N/A
+App > 	 ApplicationMaster host: N/A
+App > 	 ApplicationMaster RPC port: -1
+App > 	 queue: root.asrd_dot_cp_dot_big_dot_data_dot_services_dot_team
+App > 	 start time: 1509928167795
+App > 	 final status: UNDEFINED
+App > 	 tracking URL:  <a href='https://api.qubole.com/cluster-proxy?encodedUrl=http%3A%2F%2Fec2-54-219-168-80.us-west-1.compute.amazonaws.com%3A8088%2Fproxy%2Fapplication_1506405635520_117433%2F%3Fspark%3Dtrue&amp;clusterInst=639584' target='_blank'> Spark Application UI </a> 
+App > 	 user: asrd.cp.big.data.services.team
+App > 17/11/06 00:29:29 main INFO Client: Application report for application_1506405635520_117433 (state: ACCEPTED)
+App > 17/11/06 00:29:30 main INFO Client: Application report for application_1506405635520_117433 (state: ACCEPTED)
+App > 17/11/06 00:29:31 main INFO Client: Application report for application_1506405635520_117433 (state: ACCEPTED)
+App > 17/11/06 00:29:32 sparkDriver-akka.actor.default-dispatcher-15 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as AkkaRpcEndpointRef(Actor[akka.tcp://sparkYarnAM@10.47.7.20:43311/user/YarnAM#-965146537])
+App > 17/11/06 00:29:32 sparkDriver-akka.actor.default-dispatcher-15 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: Received AMStart(container_1506405635520_117433_01_000001, ip-10-47-7-20.us-west-1.compute.internal)
+App > 17/11/06 00:29:32 sparkDriver-akka.actor.default-dispatcher-15 INFO YarnClientSchedulerBackend: addWebUIFilter: Setting spark.ui.proxyBase to /proxy/application_1506405635520_117433
+App > 17/11/06 00:29:32 sparkDriver-akka.actor.default-dispatcher-15 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> ec2-54-219-168-80.us-west-1.compute.amazonaws.com, PROXY_URI_BASES -> http://ec2-54-219-168-80.us-west-1.compute.amazonaws.com:8088/proxy/application_1506405635520_117433), /proxy/application_1506405635520_117433
+App > 17/11/06 00:29:32 sparkDriver-akka.actor.default-dispatcher-15 INFO JettyUtils: Adding filter: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+App > 17/11/06 00:29:32 main INFO Client: Application report for application_1506405635520_117433 (state: ACCEPTED)
+App > 17/11/06 00:29:33 main INFO Client: Application report for application_1506405635520_117433 (state: RUNNING)
+App > 17/11/06 00:29:33 main INFO Client: 
+App > 	 client token: N/A
+App > 	 diagnostics: N/A
+App > 	 ApplicationMaster host: 10.47.7.20
+App > 	 ApplicationMaster RPC port: 0
+App > 	 queue: root.asrd_dot_cp_dot_big_dot_data_dot_services_dot_team
+App > 	 start time: 1509928167795
+App > 	 final status: UNDEFINED
+App > 	 tracking URL:  <a href='https://api.qubole.com/cluster-proxy?encodedUrl=http%3A%2F%2Fec2-54-219-168-80.us-west-1.compute.amazonaws.com%3A8088%2Fproxy%2Fapplication_1506405635520_117433%2F%3Fspark%3Dtrue&amp;clusterInst=639584' target='_blank'> Spark Application UI </a> 
+App > 	 user: asrd.cp.big.data.services.team
+App > 17/11/06 00:29:33 main INFO YarnClientSchedulerBackend: Application application_1506405635520_117433 has started running.
+App > 17/11/06 00:29:34 main INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44429.
+App > 17/11/06 00:29:34 main INFO NettyBlockTransferService: Server created on 44429
+App > 17/11/06 00:29:34 main INFO BlockManagerMaster: Trying to register BlockManager
+App > 17/11/06 00:29:34 sparkDriver-akka.actor.default-dispatcher-15 INFO BlockManagerMasterEndpoint: Registering block manager 10.47.7.113:44429 with 9.3 GB RAM, BlockManagerId(driver, 10.47.7.113, 44429)
+App > 17/11/06 00:29:34 main INFO BlockManagerMaster: Registered BlockManager
+App > 
+App > 
+App > 17/11/06 00:29:34 main INFO SparkContext: Dynamic Allocation and num executors both set, thus dynamic allocation disabled.
+App > 17/11/06 00:29:34 SparkListenerBus INFO ExecutorsListener: onAMStart(Some(container_1506405635520_117433_01_000001), Some(ip-10-47-7-20.us-west-1.compute.internal))
+App > 17/11/06 00:29:34 main INFO YarnScheduler$$anon$1: Adding shutdown hook for context org.apache.spark.SparkContext@3a97edbc.
+App > 17/11/06 00:29:36 sparkDriver-akka.actor.default-dispatcher-14 INFO YarnClientSchedulerBackend: Registered executor: AkkaRpcEndpointRef(Actor[akka.tcp://sparkExecutor@ip-10-47-7-20.us-west-1.compute.internal:36171/user/Executor#-728152847]) with ID 4 and containerId container_1506405635520_117433_01_000005 size 26138902528
+App > 17/11/06 00:29:36 sparkDriver-akka.actor.default-dispatcher-14 INFO BlockManagerMasterEndpoint: Registering block manager ip-10-47-7-20.us-west-1.compute.internal:37485 with 11.4 GB RAM, BlockManagerId(4, ip-10-47-7-20.us-west-1.compute.internal, 37485)
+App > 17/11/06 00:29:36 sparkDriver-akka.actor.default-dispatcher-19 INFO YarnClientSchedulerBackend: Registered executor: AkkaRpcEndpointRef(Actor[akka.tcp://sparkExecutor@ip-10-47-7-101.us-west-1.compute.internal:35833/user/Executor#147263145]) with ID 2 and containerId container_1506405635520_117433_01_000003 size 26138902528
+App > 17/11/06 00:29:37 sparkDriver-akka.actor.default-dispatcher-17 INFO YarnClientSchedulerBackend: Registered executor: AkkaRpcEndpointRef(Actor[akka.tcp://sparkExecutor@ip-10-47-7-83.us-west-1.compute.internal:39687/user/Executor#-1982356448]) with ID 1 and containerId container_1506405635520_117433_01_000002 size 26138902528
+App > 17/11/06 00:29:37 sparkDriver-akka.actor.default-dispatcher-17 INFO BlockManagerMasterEndpoint: Registering block manager ip-10-47-7-101.us-west-1.compute.internal:41975 with 11.4 GB RAM, BlockManagerId(2, ip-10-47-7-101.us-west-1.compute.internal, 41975)
+App > 17/11/06 00:29:37 sparkDriver-akka.actor.default-dispatcher-17 INFO BlockManagerMasterEndpoint: Registering block manager ip-10-47-7-83.us-west-1.compute.internal:46729 with 11.4 GB RAM, BlockManagerId(1, ip-10-47-7-83.us-west-1.compute.internal, 46729)
+App > 17/11/06 00:29:38 sparkDriver-akka.actor.default-dispatcher-17 INFO YarnClientSchedulerBackend: Registered executor: AkkaRpcEndpointRef(Actor[akka.tcp://sparkExecutor@ip-10-47-7-14.us-west-1.compute.internal:44031/user/Executor#1320830599]) with ID 3 and containerId container_1506405635520_117433_01_000004 size 26138902528
+App > 17/11/06 00:29:38 main INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+App > 17/11/06 00:29:38 main INFO YarnScheduler: YarnClientClusterScheduler.postStartHook done.
+App > 17/11/06 00:29:38 sparkDriver-akka.actor.default-dispatcher-17 INFO BlockManagerMasterEndpoint: Registering block manager ip-10-47-7-14.us-west-1.compute.internal:43497 with 11.4 GB RAM, BlockManagerId(3, ip-10-47-7-14.us-west-1.compute.internal, 43497)
+App > 17/11/06 00:29:39 main INFO HiveContext: Initializing execution hive, version 1.2.1
+App > 17/11/06 00:29:39 main INFO ClientWrapper: Inspected Hadoop version: 2.6.0-qds-0.4.14-SNAPSHOT
+App > 17/11/06 00:29:39 main INFO ClientWrapper: Loaded org.apache.hadoop.hive.shims.Hadoop23Shims for Hadoop version 2.6.0-qds-0.4.14-SNAPSHOT
+App > 17/11/06 00:29:39 main INFO HiveConf: HiveConf of name hive.allow.move.on.s3 does not exist
+App > 17/11/06 00:29:39 main INFO metastore: Trying to connect to metastore with URI thrift://metastore.api.autodesk.com:9083
+App > 17/11/06 00:29:39 main WARN UserGroupInformation: No groups available for user asrd.cp.big.data.services.team
+App > 17/11/06 00:29:39 main INFO metastore: Connected to metastore.
+App > 17/11/06 00:29:40 main INFO HiveConf: HiveConf of name hive.allow.move.on.s3 does not exist
+App > 17/11/06 00:29:40 main INFO HiveContext: default warehouse location is s3://com.autodesk.edl.prd/apps/hive/warehouse
+App > 17/11/06 00:29:40 main INFO HiveContext: Initializing HiveMetastoreConnection version 1.2.1 using Spark classes.
+App > 17/11/06 00:29:40 main INFO ClientWrapper: Inspected Hadoop version: 2.6.0-qds-0.4.14-SNAPSHOT
+App > 17/11/06 00:29:40 main INFO ClientWrapper: Loaded org.apache.hadoop.hive.shims.Hadoop23Shims for Hadoop version 2.6.0-qds-0.4.14-SNAPSHOT
+App > 17/11/06 00:29:41 main INFO HiveConf: HiveConf of name hive.allow.move.on.s3 does not exist
+App > 17/11/06 00:29:41 main WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+App > 17/11/06 00:29:41 main INFO metastore: Trying to connect to metastore with URI thrift://metastore.api.autodesk.com:9083
+App > 17/11/06 00:29:41 main WARN ShellBasedUnixGroupsMapping: got exception trying to get groups for user asrd.cp.big.data.services.team: id: asrd.cp.big.data.services.team: no such user
+App > 
+App > 17/11/06 00:29:41 main WARN UserGroupInformation: No groups available for user asrd.cp.big.data.services.team
+App > 17/11/06 00:29:41 main INFO metastore: Connected to metastore.
+App > 17/11/06 00:29:45 main INFO ParseDriver: Parsing command: INSERT OVERWRITE TABLE usage_derived.dap_experiment_total_user_session_weekly PARTITION (wk='20171029')
+App > SELECT
+App >     ttl.marketing_release_name, 
+App >     ttl.is_external, 
+App >     ttl.build_tag, 
+App >     ttl.license, 
+App >     SUM(ttl.user_count) AS user_count,
+App >     SUM(ttl.session_count) AS session_count
+App > FROM
+App > (
+App >     SELECT 
+App >         COALESCE(COALESCE(upi_nm.marketing_release_name, upi_nmb.marketing_release_name) , 'NA') AS marketing_release_name, 
+App >         COALESCE(upi_nm.build_tag, 'QA') AS build_tag, 
+App >         COALESCE(c.is_external, 'NA') AS is_external,
+App >         IF(c.licenseUsage IS NOT NULL
+App >             ,CASE
+App >                 WHEN c.licenseUsage = -1 THEN 'Unknown'
+App >                 WHEN c.licenseUsage = 0 THEN 'Unknown'
+App >                 WHEN c.licenseUsage = 1 THEN 'Commercial'
+App >                 WHEN c.licenseUsage = 2 THEN 'Education (EDU)'
+App >                 WHEN c.licenseUsage = 3 THEN 'Student (EMR)'
+App >                 WHEN c.licenseUsage = 4 THEN 'Not For Resale'
+App >                 WHEN c.licenseUsage = 5 THEN 'Requires Installation'
+App >                 WHEN c.licenseUsage = 6 THEN 'Trial'
+App >                 ELSE 'NA'
+App >             END
+App >             ,'NA'
+App >         ) AS license,
+App >         c.session_id, 
+App >         c.user_id
+App >     FROM 
+App >         (SELECT 
+App >             product_id,
+App >             release_id,
+App >             build_id,
+App >             licenseUsage,
+App >             is_external,
+App >             COUNT(DISTINCT session_id) as session_count,
+App >             COUNT(DISTINCT user_id) as user_count
+App >          FROM
+App >             usage.agg_pl2_dap_common_table_common_daily
+App >          WHERE 
+App >             dt >= '20171029'
+App >             AND dt <= '20171104'
+App >          GROUP BY product_id,
+App >             release_id,
+App >             build_id,
+App >             licenseUsage,
+App >             is_external
+App >         ) c
+App >     LEFT OUTER JOIN 
+App >         (
+App >             SELECT 
+App >                 product_line_id, 
+App >                 release_id, 
+App >                 build_id, 
+App >                 marketing_release_name, 
+App >                 build_tag
+App >             FROM
+App >                 usage_derived.cip_sds_upis_no_master
+App >             WHERE
+App >                 dt='20171102'
+App >         ) upi_nm
+App >         ON (
+App >             c.product_id = upi_nm.product_line_id 
+App >             AND c.release_id = upi_nm.release_id 
+App >             AND c.build_id = upi_nm.build_id
+App >            )
+App >     LEFT OUTER JOIN 
+App >         (
+App >             SELECT 
+App >                 product_line_id, 
+App >                 release_id,
+App >                 marketing_release_name
+App >             FROM
+App >                 usage_derived.cip_sds_upis_no_master_no_build
+App >             WHERE
+App >                 dt='20171102'
+App >         ) upi_nmb
+App >         ON (
+App >             c.product_id = upi_nmb.product_line_id 
+App >             AND c.release_id = upi_nmb.release_id 
+App >            )
+App > ) ttl
+App > GROUP BY 
+App >     ttl.marketing_release_name, 
+App >     ttl.build_tag, 
+App >     ttl.is_external, 
+App >     ttl.license
+App > 17/11/06 00:29:46 main INFO ParseDriver: Parse Completed
+Qubole > Shell Command failed with exit code: 1
+App > 17/11/06 00:29:47 main INFO SparkContext: sc.stop called from [SparkSubmit.exceptionExitHook[failure]]
+App > 17/11/06 00:29:47 main INFO Autoscaler: Shutting down Autoscaler!!
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/static/sql,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/SQL/execution/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/SQL/execution,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/SQL/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/SQL,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/api,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/static,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+App > 17/11/06 00:29:47 main INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs,null}
+App > 17/11/06 00:29:47 main INFO SparkUI: Stopped Spark web UI at http://10.47.7.113:4040
+App > 17/11/06 00:29:47 main INFO JobProgressListener: Counters=FileSystemCounters.S3N_BYTES_READ:0,FileSystemCounters.S3N_BYTES_WRITTEN:0,Job Counters.SQL_EXECUTION_COUNT:0
+App > 17/11/06 00:29:47 main INFO DAGScheduler: Stopping DAGScheduler
+App > 17/11/06 00:29:47 Yarn application state monitor INFO YarnClientSchedulerBackend: Interrupting monitor thread
+App > 17/11/06 00:29:47 main INFO YarnClientSchedulerBackend: Shutting down all executors
+App > 17/11/06 00:29:47 sparkDriver-akka.actor.default-dispatcher-17 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: Sending StopAM(false) to AppMaster
+App > 17/11/06 00:29:47 sparkDriver-akka.actor.default-dispatcher-21 INFO YarnClientSchedulerBackend: Asking each executor to shut down
+App > 17/11/06 00:29:47 main INFO YarnClientSchedulerBackend: Stopped
+App > 17/11/06 00:29:47 sparkDriver-akka.actor.default-dispatcher-3 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+App > 17/11/06 00:29:47 main INFO MemoryStore: MemoryStore cleared
+App > 17/11/06 00:29:47 main INFO BlockManager: BlockManager stopped
+App > 17/11/06 00:29:47 main INFO BlockManagerMaster: BlockManagerMaster stopped
+App > 17/11/06 00:29:47 sparkDriver-akka.actor.default-dispatcher-3 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+App > 17/11/06 00:29:47 main INFO SparkContext: Successfully stopped SparkContext
+App > Exception in thread "main" org.apache.spark.sql.AnalysisException: cannot resolve 'c.session_id' given input columns release_id, product_line_id, marketing_release_name, marketing_release_name, product_id, build_id, release_id, build_id, licenseUsage, build_tag, product_line_id, session_count, release_id, is_external, user_count; line 29 pos 8
+App > 	at org.apache.spark.sql.catalyst.analysis.package$AnalysisErrorAt.failAnalysis(package.scala:42)
+App > 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1$$anonfun$apply$2.applyOrElse(CheckAnalysis.scala:56)
+App > 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1$$anonfun$apply$2.applyOrElse(CheckAnalysis.scala:53)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$transformUp$1.apply(TreeNode.scala:293)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$transformUp$1.apply(TreeNode.scala:293)
+App > 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:51)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformUp(TreeNode.scala:292)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$5.apply(TreeNode.scala:290)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$5.apply(TreeNode.scala:290)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$4.apply(TreeNode.scala:249)
+App > 	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+App > 	at scala.collection.Iterator$class.foreach(Iterator.scala:727)
+App > 	at scala.collection.AbstractIterator.foreach(Iterator.scala:1157)
+App > 	at scala.collection.generic.Growable$class.$plus$plus$eq(Growable.scala:48)
+App > 	at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:103)
+App > 	at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:47)
+App > 	at scala.collection.TraversableOnce$class.to(TraversableOnce.scala:273)
+App > 	at scala.collection.AbstractIterator.to(Iterator.scala:1157)
+App > 	at scala.collection.TraversableOnce$class.toBuffer(TraversableOnce.scala:265)
+App > 	at scala.collection.AbstractIterator.toBuffer(Iterator.scala:1157)
+App > 	at scala.collection.TraversableOnce$class.toArray(TraversableOnce.scala:252)
+App > 	at scala.collection.AbstractIterator.toArray(Iterator.scala:1157)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformChildren(TreeNode.scala:279)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformUp(TreeNode.scala:290)
+App > 	at org.apache.spark.sql.catalyst.plans.QueryPlan.transformExpressionUp$1(QueryPlan.scala:107)
+App > 	at org.apache.spark.sql.catalyst.plans.QueryPlan.org$apache$spark$sql$catalyst$plans$QueryPlan$$recursiveTransform$2(QueryPlan.scala:117)
+App > 	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$org$apache$spark$sql$catalyst$plans$QueryPlan$$recursiveTransform$2$1.apply(QueryPlan.scala:121)
+App > 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+App > 	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+App > 	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+App > 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+App > 	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+App > 	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+App > 	at org.apache.spark.sql.catalyst.plans.QueryPlan.org$apache$spark$sql$catalyst$plans$QueryPlan$$recursiveTransform$2(QueryPlan.scala:121)
+App > 	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$2.apply(QueryPlan.scala:125)
+App > 	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+App > 	at scala.collection.Iterator$class.foreach(Iterator.scala:727)
+App > 	at scala.collection.AbstractIterator.foreach(Iterator.scala:1157)
+App > 	at scala.collection.generic.Growable$class.$plus$plus$eq(Growable.scala:48)
+App > 	at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:103)
+App > 	at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:47)
+App > 	at scala.collection.TraversableOnce$class.to(TraversableOnce.scala:273)
+App > 	at scala.collection.AbstractIterator.to(Iterator.scala:1157)
+App > 	at scala.collection.TraversableOnce$class.toBuffer(TraversableOnce.scala:265)
+App > 	at scala.collection.AbstractIterator.toBuffer(Iterator.scala:1157)
+App > 	at scala.collection.TraversableOnce$class.toArray(TraversableOnce.scala:252)
+App > 	at scala.collection.AbstractIterator.toArray(Iterator.scala:1157)
+App > 	at org.apache.spark.sql.catalyst.plans.QueryPlan.transformExpressionsUp(QueryPlan.scala:125)
+App > 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1.apply(CheckAnalysis.scala:53)
+App > 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1.apply(CheckAnalysis.scala:49)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:103)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$foreachUp$1.apply(TreeNode.scala:102)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$foreachUp$1.apply(TreeNode.scala:102)
+App > 	at scala.collection.immutable.List.foreach(List.scala:318)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:102)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$foreachUp$1.apply(TreeNode.scala:102)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$foreachUp$1.apply(TreeNode.scala:102)
+App > 	at scala.collection.immutable.List.foreach(List.scala:318)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:102)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$foreachUp$1.apply(TreeNode.scala:102)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$foreachUp$1.apply(TreeNode.scala:102)
+App > 	at scala.collection.immutable.List.foreach(List.scala:318)
+App > 	at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:102)
+App > 	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$class.checkAnalysis(CheckAnalysis.scala:49)
+App > 	at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis(Analyzer.scala:44)
+App > 	at org.apache.spark.sql.SQLContext$QueryExecution.assertAnalyzed(SQLContext.scala:914)
+App > 	at org.apache.spark.sql.DataFrame.<init>(DataFrame.scala:132)
+App > 	at org.apache.spark.sql.DataFrame$.apply(DataFrame.scala:51)
+App > 	at org.apache.spark.sql.SQLContext.sql(SQLContext.scala:725)
+App > 	at com.autodesk.adp.utils.sql.SqlDriver$$anonfun$executeQueries$1.apply(SqlDriver.scala:55)
+App > 	at com.autodesk.adp.utils.sql.SqlDriver$$anonfun$executeQueries$1.apply(SqlDriver.scala:52)
+App > 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+App > 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108)
+App > 	at com.autodesk.adp.utils.sql.SqlDriver.executeQueries(SqlDriver.scala:52)
+App > 	at com.autodesk.adp.utils.sql.SqlRunner$.main(SqlDriver.scala:79)
+App > 	at com.autodesk.adp.utils.sql.SqlRunner.main(SqlDriver.scala)
+App > 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+App > 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+App > 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+App > 	at java.lang.reflect.Method.invoke(Method.java:606)
+App > 	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:794)
+App > 	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:185)
+App > 	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:210)
+App > 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:125)
+App > 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+App > 17/11/06 00:29:47 sparkDriver-akka.actor.default-dispatcher-21 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+App > 17/11/06 00:29:47 sparkDriver-akka.actor.default-dispatcher-21 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+App > 17/11/06 00:29:47 sparkDriver-akka.actor.default-dispatcher-21 INFO RemoteActorRefProvider$RemotingTerminator: Remoting shut down.
+App > 17/11/06 00:29:48 Thread-1 INFO ShutdownHookManager: Shutdown hook called
+App > 17/11/06 00:29:48 Thread-1 INFO ShutdownHookManager: Deleting directory /tmp/spark-aa755510-3beb-461c-8a6f-9e69e3cb9775
+App > 17/11/06 00:29:48 Thread-1 INFO ShutdownHookManager: Deleting directory /media/ephemeral0/yarn/local/usercache/asrd.cp.big.data.services.team/appcache/application_1506405635520_117429/spark-a30da80c-b00c-4b2d-a4a2-73405fee62e9
+App > 17/11/06 00:29:48 Thread-1 INFO ShutdownHookManager: Deleting directory /tmp/spark-0316d471-f711-4172-9379-1fcffcc3fe86
+App > 17/11/06 00:29:48 Thread-1 INFO YarnScheduler$$anon$1: Invoing sc.stop from shutdown hook.
+App > 17/11/06 00:29:48 Thread-1 INFO SparkContext: sc.stop called from [YarnClientClusterScheduler shutdown hook]
+App > 17/11/06 00:29:48 Thread-1 INFO SparkContext: SparkContext already stopped.
+App > 17/11/06 00:29:48 Asks YARN to kill this spark job INFO YarnClientImpl: Killed application application_1506405635520_117433
+2017-11-06 00:29:57,323 ERROR shellcli.py:237 - run - Retrying exception reading mapper output: (22, 'The requested URL returned error: 404 Not Found')
+
+2017-11-06 00:29:57,535 ERROR shellcli.py:268 - run - Retrying exception reading mapper logs: (22, 'The requested URL returned error: 404 Not Found')
